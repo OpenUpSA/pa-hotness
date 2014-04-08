@@ -1,21 +1,84 @@
 {
-    "http://www.pa.org.za/person/salamuddi-salam-abram/": {
+    "salamuddi-salam-abram": {
         "name": "Salamuddi (Salam) Abram",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/a9/fb/a9fbeec03dfee764e17b06d33d7e14de.jpg",
+        "gender": "male",
         "party": "African National Congress",
-        "province": "Free State"
+        "details": [
+            "Free State"
+        ]
     },
-    "http://www.pa.org.za/person/luzelle-henrietta-adams/": {
+    "luzelle-henrietta-adams": {
         "name": "Luzelle Henrietta Adams",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/2b/55/2b550d22a7d060d5efd26802daa05582.jpg",
+        "gender": "female",
         "party": "Congress of the People",
-        "province": "Northern Cape"
+        "details": [
+            "Northern Cape"
+        ]
     },
-
-    "http://www.pa.org.za/person/arthur-roy-ainslie/": {
+    "arthur-roy-ainslie": {
         "name": "Arthur Roy Ainslie",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/84/80/8480ff03d71832183c799cdaf7d04a19.jpg",
+        "gender": "male",
         "party": "African National Congress",
-        "province": "KwaZulu-Natal"
+        "details": [
+            "KwaZulu-Natal"
+        ]
+    },
+    "solomon-lechesa-tsenoli":{
+        "name": "Solomon Lechesa Tsenoli",
+        "gender": "male",
+        "party": "African National Congress",
+        "details": [
+            "Minister of Cooperative Governance and Traditional Affairs"
+        ]
+    },
+    "grace-kekulu-tseke":{
+        "name": "Grace Kekulu Tseke",
+        "gender": "female",
+        "party": "African National Congress",
+        "details": [
+            "Mpumalanga"
+        ]
+    },
+    "pamela-tshwete":{
+        "name": "Pamela Tshwete",
+        "gender": "female",
+        "party": "African National Congress",
+        "details": [
+            "Deputy Minister of Rural Development and Land Reform",
+            "Eastern Cape"
+        ]
+    },
+    "benjamin-turok":{
+        "name": "Benjamin Turok",
+        "gender": "male",
+        "party": "African National Congress",
+        "details": [
+            "Co-Chairperson of the Joint Committee on Ethics and Members' Interests"
+        ]
+    },
+    "michael-waters":{
+        "name": "Michael Waters",
+        "gender": "male",
+        "party": "Democratic Alliance",
+        "details": [
+            "Whip",
+            "Free State"
+        ]
+    },
+    "zanoxolo-goodman-wayile":{
+        "name": "Zanoxolo Goodman Wayile",
+        "gender": "male",
+        "party": "African National Congress",
+        "details": [
+            "Eastern Cape"
+        ]
+    },
+    "sheila-coleen-nkhensani-sithole": {
+        "name": "Sheila Coleen Nkhensani Sithole",
+        "gender": "female",
+        "party": "African National Congress",
+        "details": [
+        ]
     }
+
 }
