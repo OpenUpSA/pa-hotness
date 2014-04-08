@@ -5,8 +5,8 @@
         "details": [
             "Free State"
         ], 
-        "name": "Salamuddi (Salam) Abram", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Salamuddi (Salam) Abram"
     }, 
     "grace-kekulu-tseke": {
         "gender": "female", 
@@ -14,8 +14,8 @@
         "details": [
             "Mpumalanga"
         ], 
-        "name": "Grace Kekulu Tseke", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Grace Kekulu Tseke"
     }, 
     "arthur-roy-ainslie": {
         "gender": "male", 
@@ -23,8 +23,8 @@
         "details": [
             "KwaZulu-Natal"
         ], 
-        "name": "Arthur Roy Ainslie", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Arthur Roy Ainslie"
     }, 
     "benjamin-turok": {
         "gender": "male", 
@@ -32,8 +32,8 @@
         "details": [
             "Co-Chairperson of the Joint Committee on Ethics and Members' Interests"
         ], 
-        "name": "Benjamin Turok", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Benjamin Turok"
     }, 
     "luzelle-henrietta-adams": {
         "gender": "female", 
@@ -41,8 +41,8 @@
         "details": [
             "Northern Cape"
         ], 
-        "name": "Luzelle Henrietta Adams", 
-        "party": "Congress of the People"
+        "party": "Congress of the People", 
+        "name": "Luzelle Henrietta Adams"
     }, 
     "solomon-lechesa-tsenoli": {
         "gender": "male", 
@@ -50,8 +50,8 @@
         "details": [
             "Minister of Cooperative Governance and Traditional Affairs"
         ], 
-        "name": "Solomon Lechesa Tsenoli", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Solomon Lechesa Tsenoli"
     }, 
     "zanoxolo-goodman-wayile": {
         "gender": "male", 
@@ -59,8 +59,8 @@
         "details": [
             "Eastern Cape"
         ], 
-        "name": "Zanoxolo Goodman Wayile", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Zanoxolo Goodman Wayile"
     }, 
     "pamela-tshwete": {
         "gender": "female", 
@@ -69,15 +69,15 @@
             "Deputy Minister of Rural Development and Land Reform", 
             "Eastern Cape"
         ], 
-        "name": "Pamela Tshwete", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Pamela Tshwete"
     }, 
     "sheila-coleen-nkhensani-sithole": {
         "gender": "female", 
         "score": 2, 
         "details": [], 
-        "name": "Sheila Coleen Nkhensani Sithole", 
-        "party": "African National Congress"
+        "party": "African National Congress", 
+        "name": "Sheila Coleen Nkhensani Sithole"
     }, 
     "michael-waters": {
         "gender": "male", 
@@ -86,7 +86,7 @@
             "Whip", 
             "Free State"
         ], 
-        "name": "Michael Waters", 
-        "party": "Democratic Alliance"
+        "party": "Democratic Alliance", 
+        "name": "Michael Waters"
     }
 }

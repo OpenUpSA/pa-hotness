@@ -28,6 +28,18 @@ def save_data():
     return
 
 
+@app.route('/')
+def route():
+    links = [
+        '<a href="/get_member/male/">/get_member/male/</a>',
+        '<a href="/get_member/female/">/get_member/female/</a>',
+        '<a href="/hot/pamela-tshwete/">/hot/pamela-tshwete/</a>',
+        '<a href="/not/pamela-tshwete/">/not/pamela-tshwete/</a>',
+        '<a href="/ranking/">/ranking/</a>'
+    ]
+    return "<br>".join(links)
+
+
 @app.route('/get_member/<gender>/')
 def get_member(gender):
     """
