@@ -4,7 +4,7 @@ import csv
 from bs4 import BeautifulSoup 
 from urlparse import urljoin
 
-na_url = "http://www.pa.org.za/organisation/national-assembly/people/?page=8"
+na_url = "http://www.pa.org.za/organisation/national-assembly/people/"
 
 def guess_gender(name):
     if name.startswith("Mrs") or name.startswith("Ms"):
@@ -68,11 +68,13 @@ def detail_page(url):
     }
 
 writer = csv.writer(sys.stdout)
-writer.writerow(["url", "pic_url", "name", "position/title", "party"])
+writer.writerow(["url", "pic_url", "name", "position/title", "party", "gender"])
 def _(s):
     return s.encode("utf8")
 
 for url in list_pages():
     data = detail_page(url)
-    writer.writerow([data["url"], _(data["profile_pic"]), _(data["name"]), _(data["position_title"]), _(data["party"])])
+    writer.writerow([
+        data["url"], _(data["profile_pic"]), _(data["name"]), _(data["position_title"]), _(data["party"]), _(data["gender"])
+    ])
     
