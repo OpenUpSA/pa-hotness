@@ -1,0 +1,21 @@
+{
+    "http://www.pa.org.za/person/salamuddi-salam-abram/": {
+        "name": "Salamuddi (Salam) Abram",
+        "profile-pic": "http://www.pa.org.za/media_root/cache/a9/fb/a9fbeec03dfee764e17b06d33d7e14de.jpg",
+        "party": "African National Congress",
+        "province": "Free State"
+    },
+    "http://www.pa.org.za/person/luzelle-henrietta-adams/": {
+        "name": "Luzelle Henrietta Adams",
+        "profile-pic": "http://www.pa.org.za/media_root/cache/2b/55/2b550d22a7d060d5efd26802daa05582.jpg",
+        "party": "Congress of the People",
+        "province": "Northern Cape"
+    },
+
+    "http://www.pa.org.za/person/arthur-roy-ainslie/": {
+        "name": "Arthur Roy Ainslie",
+        "profile-pic": "http://www.pa.org.za/media_root/cache/84/80/8480ff03d71832183c799cdaf7d04a19.jpg",
+        "party": "African National Congress",
+        "province": "KwaZulu-Natal"
+    }
+}
