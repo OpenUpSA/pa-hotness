@@ -19,6 +19,12 @@ with app.open_instance_resource('mp_details.json') as f:
         else:
             females.append(key)
 
+def send_api_response(data_dict):
+
+    response = jsonify(data_dict)
+    response.headers['Access-Control-Allow-Origin'] = "*"
+    return response
+
 
 def save_data():
 
@@ -55,7 +61,7 @@ def get_member(gender):
         tmp = females
 
     i = randint(0, len(tmp)-1)
-    return jsonify({"id": tmp[i], "data": mp_details[tmp[i]]})
+    return send_api_response({"id": tmp[i], "data": mp_details[tmp[i]]})
 
 
 @app.route('/hot/<mp_id>/')
@@ -72,7 +78,7 @@ def hot(mp_id):
     except KeyError:
         abort(404)
     save_data()
-    return jsonify({"id": mp_id, "data": mp})
+    return send_api_response({"id": mp_id, "data": mp})
 
 
 @app.route('/not/<mp_id>/')
@@ -89,7 +95,7 @@ def not_hot(mp_id):
     except KeyError:
         abort(404)
     save_data()
-    return jsonify({"id": mp_id, "data": mp})
+    return send_api_response({"id": mp_id, "data": mp})
 
 
 @app.route('/ranking/')
@@ -119,4 +125,4 @@ def ranking():
         rec = tmp[i]
         mp = {"id": rec['mp_id'], "data": mp_details[rec['mp_id']]}
         top_females[i+1] = mp
-    return jsonify({"male": top_males, "female": top_females})
+    return send_api_response({"male": top_males, "female": top_females})
