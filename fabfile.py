@@ -87,12 +87,15 @@ def configure():
     put(env.config_dir + '/config.py', '/tmp/config.py')
     sudo('mv /tmp/config.py %s/instance/config.py' % env.project_dir)
 
-    # upload data files
-    put('instance/mp_details.json', '/tmp/mp_details.json')
-    sudo('mv /tmp/mp_details.json %s/instance/mp_details.json' % env.project_dir)
-
     set_permissions()
     restart()
+    return
+
+
+def upload_data():
+
+    put('instance/mp_details.json', '/tmp/mp_details.json')
+    sudo('mv /tmp/mp_details.json %s/instance/mp_details.json' % env.project_dir)
     return
 
 

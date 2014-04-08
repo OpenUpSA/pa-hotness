@@ -1,84 +1,92 @@
 {
     "salamuddi-salam-abram": {
-        "name": "Salamuddi (Salam) Abram",
-        "gender": "male",
-        "party": "African National Congress",
+        "gender": "male", 
+        "score": 0, 
         "details": [
             "Free State"
-        ]
-    },
-    "luzelle-henrietta-adams": {
-        "name": "Luzelle Henrietta Adams",
-        "gender": "female",
-        "party": "Congress of the People",
-        "details": [
-            "Northern Cape"
-        ]
-    },
-    "arthur-roy-ainslie": {
-        "name": "Arthur Roy Ainslie",
-        "gender": "male",
-        "party": "African National Congress",
-        "details": [
-            "KwaZulu-Natal"
-        ]
-    },
-    "solomon-lechesa-tsenoli":{
-        "name": "Solomon Lechesa Tsenoli",
-        "gender": "male",
-        "party": "African National Congress",
-        "details": [
-            "Minister of Cooperative Governance and Traditional Affairs"
-        ]
-    },
-    "grace-kekulu-tseke":{
-        "name": "Grace Kekulu Tseke",
-        "gender": "female",
-        "party": "African National Congress",
+        ], 
+        "party": "African National Congress", 
+        "name": "Salamuddi (Salam) Abram"
+    }, 
+    "grace-kekulu-tseke": {
+        "gender": "female", 
+        "score": 0, 
         "details": [
             "Mpumalanga"
-        ]
-    },
-    "pamela-tshwete":{
-        "name": "Pamela Tshwete",
-        "gender": "female",
-        "party": "African National Congress",
+        ], 
+        "party": "African National Congress", 
+        "name": "Grace Kekulu Tseke"
+    }, 
+    "arthur-roy-ainslie": {
+        "gender": "male", 
+        "score": 0, 
         "details": [
-            "Deputy Minister of Rural Development and Land Reform",
-            "Eastern Cape"
-        ]
-    },
-    "benjamin-turok":{
-        "name": "Benjamin Turok",
-        "gender": "male",
-        "party": "African National Congress",
+            "KwaZulu-Natal"
+        ], 
+        "party": "African National Congress", 
+        "name": "Arthur Roy Ainslie"
+    }, 
+    "benjamin-turok": {
+        "gender": "male", 
+        "score": 1, 
         "details": [
             "Co-Chairperson of the Joint Committee on Ethics and Members' Interests"
-        ]
-    },
-    "michael-waters":{
-        "name": "Michael Waters",
-        "gender": "male",
-        "party": "Democratic Alliance",
+        ], 
+        "party": "African National Congress", 
+        "name": "Benjamin Turok"
+    }, 
+    "luzelle-henrietta-adams": {
+        "gender": "female", 
+        "score": 0, 
         "details": [
-            "Whip",
-            "Free State"
-        ]
-    },
-    "zanoxolo-goodman-wayile":{
-        "name": "Zanoxolo Goodman Wayile",
-        "gender": "male",
-        "party": "African National Congress",
+            "Northern Cape"
+        ], 
+        "party": "Congress of the People", 
+        "name": "Luzelle Henrietta Adams"
+    }, 
+    "solomon-lechesa-tsenoli": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Minister of Cooperative Governance and Traditional Affairs"
+        ], 
+        "party": "African National Congress", 
+        "name": "Solomon Lechesa Tsenoli"
+    }, 
+    "zanoxolo-goodman-wayile": {
+        "gender": "male", 
+        "score": 0, 
         "details": [
             "Eastern Cape"
-        ]
-    },
-    "sheila-coleen-nkhensani-sithole": {
-        "name": "Sheila Coleen Nkhensani Sithole",
-        "gender": "female",
-        "party": "African National Congress",
+        ], 
+        "party": "African National Congress", 
+        "name": "Zanoxolo Goodman Wayile"
+    }, 
+    "pamela-tshwete": {
+        "gender": "female", 
+        "score": 0, 
         "details": [
-        ]
+            "Deputy Minister of Rural Development and Land Reform", 
+            "Eastern Cape"
+        ], 
+        "party": "African National Congress", 
+        "name": "Pamela Tshwete"
+    }, 
+    "sheila-coleen-nkhensani-sithole": {
+        "gender": "female", 
+        "score": 0, 
+        "details": [], 
+        "party": "African National Congress", 
+        "name": "Sheila Coleen Nkhensani Sithole"
+    }, 
+    "michael-waters": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Whip", 
+            "Free State"
+        ], 
+        "party": "Democratic Alliance", 
+        "name": "Michael Waters"
     }
-
 }
