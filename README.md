@@ -1,31 +1,23 @@
-project-template
+pa-hotness
 ================
 
-Template for code4sa web applications. 
+"Hot or Not" style app for getting to know your representatives in parliament. Information on candidates comes form the
+People's Assembly website at http://www.pa.org.za/organisation/national-assembly/people/
 
 
 ## What does this project do
 
-This project is an empty template for new code4sa projects.
+Let people discover more information about their representatives in parliament, by having them rate parliamentarians.
+The user is repeatedly confronted by a random parliamentarian's information, and asked to decide whether that
+parliamentarian is "Hot" or "Not".
 
-This space should be used for describing a project's intended purpose.
+In this way, parliamentarians are ranked, and the rankings are displayed on a different screen.
 
 ## How it works
 
-Describe the main user interface, and provide a link if it is already in production.
+The frontend is ...
 
-If the project implements an API, list the API endpoints.
-
-To start out with this template on a new project:
-
-    1. Create a new empty repo on GitHub, called my-new-project
-    2. Checkout this template to the new project's directory on your local drive
-        git clone git@github.com:Code4SA/project-template.git my-new-project
-    3. Update the project's "origin" remote to point to the new GitHub repo:
-        cd my-new-project
-        git remote set-url origin git@github.com:Code4SA/my-new-project.git
-    4. Push the template to the empty GitHub repo:
-        git push origin master
+The backend exposes a couple of API endpoints, and a little Admin interface for managing the site's data.
 
 ## Contributing to the project
 
@@ -36,13 +28,13 @@ If you want to contribute to the code, please fork the repository, make your cha
 
 ### Local setup
 
-Explain what is needed for setting up a development environment.
+...
 
 ### Deploy instructions
 
-Explain how this project can be deployed, should you be hit by a bus.
+...
 
 ### Maintenance
 
-Add any notes on what might be needed to keep this code running for a long time.
+...
 
