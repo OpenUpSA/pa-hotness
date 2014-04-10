@@ -36,3 +36,6 @@ nosetests.xml
 .pydevproject
 .idea
 scraper/out.csv
+
+env
+.DS_Store
