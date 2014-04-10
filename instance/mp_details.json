@@ -1,21 +1,92 @@
 {
-    "http://www.pa.org.za/person/salamuddi-salam-abram/": {
-        "name": "Salamuddi (Salam) Abram",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/a9/fb/a9fbeec03dfee764e17b06d33d7e14de.jpg",
-        "party": "African National Congress",
-        "province": "Free State"
-    },
-    "http://www.pa.org.za/person/luzelle-henrietta-adams/": {
-        "name": "Luzelle Henrietta Adams",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/2b/55/2b550d22a7d060d5efd26802daa05582.jpg",
-        "party": "Congress of the People",
-        "province": "Northern Cape"
-    },
-
-    "http://www.pa.org.za/person/arthur-roy-ainslie/": {
-        "name": "Arthur Roy Ainslie",
-        "profile-pic": "http://www.pa.org.za/media_root/cache/84/80/8480ff03d71832183c799cdaf7d04a19.jpg",
-        "party": "African National Congress",
-        "province": "KwaZulu-Natal"
+    "salamuddi-salam-abram": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Free State"
+        ], 
+        "party": "African National Congress", 
+        "name": "Salamuddi (Salam) Abram"
+    }, 
+    "grace-kekulu-tseke": {
+        "gender": "female", 
+        "score": 0, 
+        "details": [
+            "Mpumalanga"
+        ], 
+        "party": "African National Congress", 
+        "name": "Grace Kekulu Tseke"
+    }, 
+    "arthur-roy-ainslie": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "KwaZulu-Natal"
+        ], 
+        "party": "African National Congress", 
+        "name": "Arthur Roy Ainslie"
+    }, 
+    "benjamin-turok": {
+        "gender": "male", 
+        "score": 1, 
+        "details": [
+            "Co-Chairperson of the Joint Committee on Ethics and Members' Interests"
+        ], 
+        "party": "African National Congress", 
+        "name": "Benjamin Turok"
+    }, 
+    "luzelle-henrietta-adams": {
+        "gender": "female", 
+        "score": 0, 
+        "details": [
+            "Northern Cape"
+        ], 
+        "party": "Congress of the People", 
+        "name": "Luzelle Henrietta Adams"
+    }, 
+    "solomon-lechesa-tsenoli": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Minister of Cooperative Governance and Traditional Affairs"
+        ], 
+        "party": "African National Congress", 
+        "name": "Solomon Lechesa Tsenoli"
+    }, 
+    "zanoxolo-goodman-wayile": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Eastern Cape"
+        ], 
+        "party": "African National Congress", 
+        "name": "Zanoxolo Goodman Wayile"
+    }, 
+    "pamela-tshwete": {
+        "gender": "female", 
+        "score": 0, 
+        "details": [
+            "Deputy Minister of Rural Development and Land Reform", 
+            "Eastern Cape"
+        ], 
+        "party": "African National Congress", 
+        "name": "Pamela Tshwete"
+    }, 
+    "sheila-coleen-nkhensani-sithole": {
+        "gender": "female", 
+        "score": 2, 
+        "details": [], 
+        "party": "African National Congress", 
+        "name": "Sheila Coleen Nkhensani Sithole"
+    }, 
+    "michael-waters": {
+        "gender": "male", 
+        "score": 0, 
+        "details": [
+            "Whip", 
+            "Free State"
+        ], 
+        "party": "Democratic Alliance", 
+        "name": "Michael Waters"
     }
 }
