@@ -55,7 +55,9 @@ def setup():
     sudo('apt-get install nginx')
     # restart nginx after reboot
     sudo('update-rc.d nginx defaults')
-    sudo('service nginx start')
+
+    with settings(warn_only=True):
+        sudo('service nginx start')
     return
 
 
@@ -92,10 +94,10 @@ def configure():
     return
 
 
-def upload_data():
+def upload_db():
 
-    put('instance/mp_details.json', '/tmp/mp_details.json')
-    sudo('mv /tmp/mp_details.json %s/instance/mp_details.json' % env.project_dir)
+    put('instance/pa-hotness.db', '/tmp/pa-hotness.db')
+    sudo('mv /tmp/pa-hotness.db %s/instance/pa-hotness.db' % env.project_dir)
     return
 
 
@@ -109,9 +111,6 @@ def deploy():
 
     # upload the source tarball to the temporary folder on the server
     put('backend.tar.gz', '/tmp/backend.tar.gz')
-
-    with settings(warn_only=True):
-        sudo('service nginx stop')
 
     # enter application directory
     with cd(env.project_dir):
