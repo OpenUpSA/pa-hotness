@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hot or Not :: Political Edition</title>
+	<link rel="stylesheet" href="frontend/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="frontend/css/style.css">
+</head>
+<body>
+	<div class="container" >
+		<h1>Hot or Not :: Political Edition</h1>
+		<div data-bind="if: sex()==0">
+			Viewing Men
+			<div class="btn btn-primary" data-bind="click: clickWomen">Show me Women</div>
+		</div>
+		<div data-bind="if: sex()==1">
+			Viewing Women
+			<div class="btn btn-primary" data-bind="click: clickMen">Show me Men</div>
+		</div>
+		<div class="btn btn-info" data-bind="click: clickLeaderboard">Leaderboard</div>
+		<div data-bind="ifnot: showLeaderboard">
+			<h2>Pick the hottest</h2>
+			<div data-bind="foreach:peeps">
+				<div class="col-md-6 text-center" data-bind="css: { winner: ($parent.winner().id == id) }">
+					<h4 class="name" data-bind="text:name"></h4>
+					<img style="cursor: pointer" data-bind="attr { src:profile_pic, alt:name }, click: $parent.clickVote">
+					<div data-bind="if: $parent.voted">
+						<div data-bind="if: $parent.winner().id == id">
+							<h5 data-bind="text: party"></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" id="leaderboard" data-bind="if: showLeaderboard">
+		<h2>Leaderboard - Women</h2>
+		<div data-bind="foreach: leaders_female">
+			<div class="col-md-6 text-center">
+				<h4 class="name" data-bind="text:name"></h4>
+				<a data-bind="attr { href: url }"><img data-bind="attr { src:profile_pic, alt:name }"></a>
+				<h6 data-bind="text: party"></h6>
+				<h6>Score: <span data-bind="text: score"></span></h6>
+			</div>
+		</div>
+
+		<h2>Leaderboard - Men</h2>
+		<div data-bind="foreach: leaders_male">
+			<div class="col-md-6 text-center">
+				<h4 class="name" data-bind="text:name"></h4>
+				<a data-bind="attr { href: url }"><img data-bind="attr { src:profile_pic, alt:name }"></a>
+				<h6 data-bind="text: party"></h6>
+				<h6>Score: <span data-bind="text: score"></span></h6>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer text-center">
+		<a href="http://www.pa.org.za/">All Data from the People's Assembly</a><br />
+		<a href="http://code4sa.org">Created by Code4SA (C) 1996</a> | <a href="http://commons.wikimedia.org/wiki/File:Animated_fire_by_nevit.gif">Fire Image by Nevit</a> | <a href="http://getbootstrap.com/">Bootstrap 3</a> | <a href="http://code.divshot.com/geo-bootstrap">Geo for Bootstrap from Divshot</a> | <a href="http://knockoutjs.com/">Knockout.js</a>
+	</footer>
+</body>
+<script src="frontend/underscore-min.js"></script>
+<script src="frontend/jquery-1.11.0.min.js"></script>
+<script src="frontend/knockout-3.1.0.js"></script>
+
+<script>
+	const MEN = 0;
+	const WOMEN = 1;
+
+	var Peep = function(data) {
+		var self = this;
+		self.name = ko.observable(data.name || "");
+		self.gender = ko.observable(data.gender || "");
+		self.id = ko.observable(data.id || "");
+		self.party = ko.observable(data.party || "");
+		self.profile_pic = ko.observable(data.profile_pic || "");
+		self.score = ko.observable(data.score || 0);
+		self.url = ko.observable(data.url || "");
+	}
+
+	var Peeps = function(sex) {
+		var self = this;
+		
+		self.sex = ko.observable(sex || MEN); //0=Men, 1=Women
+		self.peeps = ko.observableArray();
+		self.leaders_female = ko.observableArray();
+		self.leaders_male = ko.observableArray();
+
+		self.sexUrl = ["male", "female"];
+
+		self.voted = ko.observable(false);
+		self.winner = ko.observable({ id: false });
+		self.showLeaderboard = ko.observable(false);
+
+		self.refresh = function() {
+			$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/", function(peep1) {
+				$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/", function(peep2) {
+					if(peep1 == peep2) {
+						self.refresh();
+						return;
+					}
+					self.peeps([peep1, peep2]);
+					self.voted(false);
+				});
+			});
+			$.getJSON("http://hot-or-not-api.demo4sa.org/ranking/", function(rankings) {
+				self.leaders_female(rankings.female);
+				self.leaders_male(rankings.male);
+			});
+		}
+		self.clickWomen = function() {
+			self.changeSex(WOMEN);
+		}
+
+		self.clickMen = function() {
+			self.changeSex(MEN);
+		}
+		
+		self.changeSex = function(sex) {
+			self.sex(sex);
+			self.refresh();
+		}
+
+		self.clickVote = function() {
+			if (!self.voted()) {
+				$.getJSON("http://hot-or-not-api.demo4sa.org/hot/" + this.id + "/", function(data) {
+					self.winner(data);
+					self.voted(true);
+					
+					window.setTimeout(self.refresh, 2000);
+				});
+			}
+		}
+
+		self.clickLeaderboard = function() {
+			self.showLeaderboard( ! self.showLeaderboard());
+		}
+
+		self.refresh();
+	}
+
+	ko.applyBindings(new Peeps(WOMEN));
+
+</script>
+</html>
