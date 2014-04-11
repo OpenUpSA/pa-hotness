@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container" id="leaderboard" data-bind="if: showLeaderboard">
 		<h2>Leaderboard - Women</h2>
 		<div data-bind="foreach: leaders_female">
@@ -59,7 +59,8 @@
 
 	<footer class="footer text-center">
 		<a href="http://www.pa.org.za/">All Data from the People's Assembly</a><br />
-		<a href="http://code4sa.org">Created by Code4SA (C) 1996</a> | <a href="http://commons.wikimedia.org/wiki/File:Animated_fire_by_nevit.gif">Fire Image by Nevit</a> | <a href="http://getbootstrap.com/">Bootstrap 3</a> | <a href="http://code.divshot.com/geo-bootstrap">Geo for Bootstrap from Divshot</a> | <a href="http://knockoutjs.com/">Knockout.js</a>
+		<a href="http://code4sa.org">Created by Code4SA (C) 1996</a> | <a href="http://commons.wikimedia.org/wiki/File:Animated_fire_by_nevit.gif">Fire Image by Nevit</a> | <a href="http://getbootstrap.com/">Bootstrap 3</a> | <a href="http://code.divshot.com/geo-bootstrap">Geo for Bootstrap from Divshot</a> | <a href="http://knockoutjs.com/">Knockout.js</a><br />
+		<img src="frontend/counter2.gif" />
 	</footer>
 </body>
 <script src="frontend/underscore-min.js"></script>
@@ -96,8 +97,8 @@
 		self.showLeaderboard = ko.observable(false);
 
 		self.refresh = function() {
-			$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/", function(peep1) {
-				$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/", function(peep2) {
+			$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/?1", function(peep1) {
+				$.getJSON("http://hot-or-not-api.demo4sa.org/get_member/"+self.sexUrl[self.sex()]+"/?2", function(peep2) {
 					if(peep1 == peep2) {
 						self.refresh();
 						return;
